@@ -30,9 +30,7 @@ class Config(object):
     # get this value from http://www.timezoneconverter.com/cgi-bin/findzone.tzc
     TZ = os.environ.get("TZ", "Asia/Baghdad")
     # set this with required zed repo link
-    UPSTREAM_REPO = os.environ.get(
-        "UPSTREAM_REPO", "https://github.com/ZThon-Ar/ZTZ"
-    )
+    UPSTREAM_REPO = os.environ.get("UPSTREAM_REPO", "https://github.com/ZThon-Ar/ZTZ")
     # External plugins repo
     EXTERNAL_REPO = os.environ.get("EXTERNAL_REPO", None)
     VCMODE = os.environ.get("VCMODE", False)
@@ -66,7 +64,7 @@ class Config(object):
         or 0
     )
 
-    #فارات زدثــون
+    # فارات زدثــون
     CUSTOM_ALIVE_TEXT = os.environ.get("CUSTOM_ALIVE_TEXT", None)
     CUSTOM_ALIVE_EMOJI = os.environ.get("CUSTOM_ALIVE_EMOJI", None)
     CUSTOM_ALIVE_EMZED = os.environ.get("CUSTOM_ALIVE_EMZED", None)
@@ -193,6 +191,7 @@ class Config(object):
     OLDZED_REPOBRANCH = os.environ.get("OLDZED_REPOBRANCH", "oldzed")
     VC_REPO = os.environ.get("VC_REPO", "https://github.com/Zed-Thon/ZVCPlayer")
     VC_REPOBRANCH = os.environ.get("VC_REPOBRANCH", "zvcplayer")
+
 
 class Production(Config):
     LOGGER = False

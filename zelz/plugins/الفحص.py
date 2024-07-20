@@ -1,11 +1,9 @@
 import random
-import re
 import time
-import psutil
 from datetime import datetime
 from platform import python_version
 
-import requests
+import psutil
 from telethon import version
 from telethon.errors.rpcerrorlist import (
     MediaEmptyError,
@@ -13,13 +11,12 @@ from telethon.errors.rpcerrorlist import (
     WebpageMediaEmptyError,
 )
 
-from . import StartTime, zedub, zedversion
-
 from ..Config import Config
 from ..core.managers import edit_or_reply
-from ..helpers.functions import zedalive, check_data_base_heal_th, get_readable_time
+from ..helpers.functions import check_data_base_heal_th, get_readable_time
 from ..helpers.utils import reply_id
 from ..sql_helper.globals import gvarstatus
+from . import StartTime, zedub, zedversion
 
 plugin_category = "العروض"
 STATS = gvarstatus("Z_STATS") or "فحص"
@@ -39,14 +36,18 @@ async def zed_alive(event):
     if gvarstatus("z_date") is not None:
         zzd = gvarstatus("z_date")
         zzt = gvarstatus("z_time")
-        zedda = f"{zzd}┊{zzt}"
+        f"{zzd}┊{zzt}"
     else:
-        zedda = f"{bt.year}/{bt.month}/{bt.day}"
+        f"{bt.year}/{bt.month}/{bt.day}"
     Z_EMOJI = gvarstatus("ALIVE_EMOJI") or "✥┊"
-    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "** بـوت  زدثــون 𝗭𝗧𝗵𝗼𝗻  يعمـل .. بنجـاح ☑️ 𓆩 **"
+    ALIVE_TEXT = (
+        gvarstatus("ALIVE_TEXT") or "** بـوت  زدثــون 𝗭𝗧𝗵𝗼𝗻  يعمـل .. بنجـاح ☑️ 𓆩 **"
+    )
     ZED_IMG = gvarstatus("ALIVE_PIC")
     USERID = zedub.uid if Config.OWNER_ID == 0 else Config.OWNER_ID
-    ALIVE_NAME = gvarstatus("ALIVE_NAME") if gvarstatus("ALIVE_NAME") else Config.ALIVE_NAME
+    ALIVE_NAME = (
+        gvarstatus("ALIVE_NAME") if gvarstatus("ALIVE_NAME") else Config.ALIVE_NAME
+    )
     mention = f"[{ALIVE_NAME}](tg://user?id={USERID})"
     zed_caption = gvarstatus("ALIVE_TEMPLATE") or zed_temp
     caption = zed_caption.format(

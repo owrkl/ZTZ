@@ -1,3 +1,4 @@
+import os
 import sys, asyncio
 import zelz
 from zelz import BOTLOG_CHATID, HEROKU_APP, PM_LOGGER_GROUP_ID
@@ -8,6 +9,8 @@ from .core.session import zedub
 from .utils import mybot, saves, autoname
 from .utils import add_bot_to_logger_group, load_plugins, setup_bot, startupmessage, verifyLoggerGroup
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
+
+port = int(os.environ.get("PORT", 10000))
 
 LOGS = logging.getLogger("Zelzal")
 cmdhr = Config.COMMAND_HAND_LER

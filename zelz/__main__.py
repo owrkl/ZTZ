@@ -5,7 +5,7 @@ import threading
 import sys, asyncio
 import zelz
 from zelz import heroku_App
-from zelz import PM_LOGGER_GROUP_ID
+from zelz import pm_logger_group_id
 from telethon import functions
 from .Config import Config
 from .core.logger import logging

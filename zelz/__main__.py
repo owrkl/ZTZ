@@ -4,7 +4,7 @@ from flask import Flask
 
 app = Flask(__name__)
 port = int(os.environ.get("PORT", 10000))
-app.run(host="0.0.0.0", port=port)
+
 
 import sys, asyncio
 import zelz
@@ -85,4 +85,4 @@ else:
         zedub.run_until_disconnected()
     except ConnectionError:
         pass
-
+app.run(host="0.0.0.0", port=port)

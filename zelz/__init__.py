@@ -3,22 +3,23 @@ from flask import Flask
 import threading
 app = Flask(__name__)
 
+import signal
+import sys
+import time
+import heroku3
+
+from .Config import Config
+from .core.logger import logging
+from .core.session import zedub
+from .helpers.functions.converter import Convert
+from .helpers.functions.musictool import *
+from .helpers.utils.utils import runasync
+from .sql_helper.globals import addgvar, delgvar, gvarstatus
+    
+    
 
 def original():
-    import signal
-    import sys
-    import time
-    import heroku3
-    
-    from .Config import Config
-    from .core.logger import logging
-    from .core.session import zedub
-    from .helpers.functions.converter import Convert
-    from .helpers.functions.musictool import *
-    from .helpers.utils.utils import runasync
-    from .sql_helper.globals import addgvar, delgvar, gvarstatus
-    
-    
+   
     __version__ = "3.3.3"
     __license__ = "حقـوق سـورس زدثــون"
     __author__ = "زدثــون <https://T.me/ZThon>"

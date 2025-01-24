@@ -1,6 +1,7 @@
 import signal
 import sys
 import time
+import os
 
 import heroku3
 
@@ -12,6 +13,7 @@ from .helpers.functions.musictool import *
 from .helpers.utils.utils import runasync
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
+port = (os.environ.get("PORT", 10000))
 __version__ = "3.3.3"
 __license__ = "حقـوق سـورس زدثــون"
 __author__ = "زدثــون <https://T.me/ZThon>"

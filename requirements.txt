@@ -36,7 +36,7 @@ lottie
 lyricsgenius
 markdown
 motor
-moviepy
+moviepy=1.0.3
 nekos.py
 opentele
 Pillow

@@ -2,7 +2,7 @@ import signal
 import sys
 import time
 import os
-
+from flask import Flask
 import heroku3
 
 from .Config import Config

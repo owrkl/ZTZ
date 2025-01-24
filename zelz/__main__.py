@@ -1,4 +1,12 @@
-import os
+import os'
+
+from flask import Flask
+
+app = Flask(__name__)
+port = int(os.environ.get("PORT", 10000))
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=port)
+
 import sys, asyncio
 import zelz
 from zelz import BOTLOG_CHATID, HEROKU_APP, PM_LOGGER_GROUP_ID
@@ -10,12 +18,6 @@ from .utils import mybot, saves, autoname
 from .utils import add_bot_to_logger_group, load_plugins, setup_bot, startupmessage, verifyLoggerGroup
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 from moviepy import *
-from flask import Flask
-
-app = Flask(__name__)
-port = int(os.environ.get("PORT", 10000))
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=port)
 
 LOGS = logging.getLogger("Zelzal")
 cmdhr = Config.COMMAND_HAND_LER
@@ -84,3 +86,4 @@ else:
         zedub.run_until_disconnected()
     except ConnectionError:
         pass
+

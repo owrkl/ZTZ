@@ -16,6 +16,7 @@ __version__ = "3.3.3"
 __license__ = "حقـوق سـورس زدثــون"
 __author__ = "زدثــون <https://T.me/ZThon>"
 __copyright__ = "ZThon Source (C) 2020 - 2024  " + __author__
+port=8080
 
 zedub.version = __version__
 LOGS = logging.getLogger("زدثــون")

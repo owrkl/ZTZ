@@ -2,7 +2,7 @@ import os
 from flask import Flask
 app = Flask(__name__)
 port = int(os.environ.get("PORT", 10000))
-app.run(host="0.0.0.0", port=port)
+
 
 import signal
 import sys
@@ -87,3 +87,4 @@ LOAD_PLUG = {}
 BOTLOG = Config.BOTLOG
 BOTLOG_CHATID = Config.BOTLOG_CHATID
 PM_LOGGER_GROUP_ID = Config.PM_LOGGER_GROUP_ID
+app.run(host="0.0.0.0", port=port)

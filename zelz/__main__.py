@@ -11,7 +11,10 @@ from .utils import add_bot_to_logger_group, load_plugins, setup_bot, startupmess
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 from moviepy import *
 
+app = Flask(__name__)
 port = int(os.environ.get("PORT", 10000))
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=port)
 
 LOGS = logging.getLogger("Zelzal")
 cmdhr = Config.COMMAND_HAND_LER

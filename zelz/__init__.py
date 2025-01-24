@@ -13,7 +13,10 @@ from .helpers.functions.musictool import *
 from .helpers.utils.utils import runasync
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
-port = (os.getenv("PORT", 10000))
+app = Flask(__name__)
+port = int(os.environ.get("PORT", 10000))
+if __name__ == "__init__":
+    app.run(host="0.0.0.0", port=port)
 __version__ = "3.3.3"
 __license__ = "حقـوق سـورس زدثــون"
 __author__ = "زدثــون <https://T.me/ZThon>"

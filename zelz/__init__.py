@@ -1,8 +1,12 @@
+import os
+from flask import Flask
+app = Flask(__name__)
+port = int(os.environ.get("PORT", 10000))
+app.run(host="0.0.0.0", port=port)
+
 import signal
 import sys
 import time
-import os
-from flask import Flask
 import heroku3
 
 from .Config import Config
@@ -13,10 +17,7 @@ from .helpers.functions.musictool import *
 from .helpers.utils.utils import runasync
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
-app = Flask(__name__)
-port = int(os.environ.get("PORT", 10000))
-if __name__ == "__init__":
-    app.run(host="0.0.0.0", port=port)
+
 __version__ = "3.3.3"
 __license__ = "حقـوق سـورس زدثــون"
 __author__ = "زدثــون <https://T.me/ZThon>"

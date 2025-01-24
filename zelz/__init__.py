@@ -89,7 +89,7 @@ def original():
     BOTLOG_CHATID = Config.BOTLOG_CHATID
     PM_LOGGER_GROUP_ID = Config.PM_LOGGER_GROUP_ID
 
-threading.Thread(target=original).start.()
+threading.Thread(target=original).start()
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))

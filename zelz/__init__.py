@@ -60,15 +60,9 @@ def original():
     elif str(Config.PM_LOGGER_GROUP_ID)[0] != "-":
         Config.PM_LOGGER_GROUP_ID = int(f"-" + str(Config.PM_LOGGER_GROUP_ID))
     
-    try:
-        if Config.HEROKU_API_KEY is not None or Config.HEROKU_APP_NAME is not None:
-            HEROKU_APP = heroku3.from_key(Config.HEROKU_API_KEY).apps()[
-                Config.HEROKU_APP_NAME
-            ]
-        else:
-            HEROKU_APP = None
-    except Exception:
-        HEROKU_APP = None
+   HEROKU_API_KEY = None
+   HEROKU_APP_ID = None
+   HEROKU_APP = None
     
     
     # Global Configiables

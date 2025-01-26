@@ -79,3 +79,4 @@ youtube_dl
 yt-dlp==2024.7.16
 img2html
 googletrans-py
+requests

@@ -5,7 +5,7 @@ import sys
 import traceback
 from pathlib import Path
 
-from zelz.__init__ import CMD_LIST, LOAD_PLUG, SUDO_LIST
+from zelz import CMD_LIST, LOAD_PLUG, SUDO_LIST
 from ..Config import Config
 from ..core.data import _sudousers_list, blacklist_chats_list
 from ..core.events import MessageEdited, NewMessage

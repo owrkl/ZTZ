@@ -19,4 +19,4 @@ Please see < https://github.com/Zelzal-SC/ZTZ/blob/main/LICENSE >
 All rights reserved.
 EOF
 
-gunicorn app:app --daemon && python -m zelz && python3 keep_alive.py
+python3 keep_alive.py && gunicorn app:app --daemon && python -m zelz

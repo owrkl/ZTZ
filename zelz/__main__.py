@@ -4,8 +4,6 @@ from flask import Flask
 import threading
 import sys, asyncio
 import zelz
-from zelz import heroku_App
-from zelz import pm_logger_group_id
 from telethon import functions
 from .Config import Config
 from .core.logger import logging
@@ -14,7 +12,6 @@ from .utils import mybot, saves, autoname
 from .utils import add_bot_to_logger_group, load_plugins, setup_bot, startupmessage, verifyLoggerGroup
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 from moviepy import *
-from zelz import botlog_chatid
 
 app = Flask(__name__)
 

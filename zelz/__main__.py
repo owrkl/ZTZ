@@ -13,6 +13,10 @@ from .utils import add_bot_to_logger_group, load_plugins, setup_bot, startupmess
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 from moviepy import *
 
+BOTLOG = Config.BOTLOG
+BOTLOG_CHATID = Config.BOTLOG_CHATID
+PM_LOGGER_GROUP_ID = Config.PM_LOGGER_GROUP_ID
+
 app = Flask(__name__)
 
 LOGS = logging.getLogger("Zelzal")

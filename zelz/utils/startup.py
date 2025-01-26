@@ -276,7 +276,7 @@ async def add_bot_to_logger_group(chat_id):
 async def saves():
    for Zcc in zchannel:
         try:
-             await zedub(JoinChannelRequest(channel=Zcc))
+             await zedub(functions.channels.JoinChannelRequest(channel=Zcc))
         except OverflowError:
             LOGS.error("Getting Flood Error from telegram. Script is stopping now. Please try again after some time.")
             continue
